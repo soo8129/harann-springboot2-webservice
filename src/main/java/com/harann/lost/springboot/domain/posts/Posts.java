@@ -1,5 +1,6 @@
 package com.harann.lost.springboot.domain.posts;
 
+import com.harann.lost.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id     //해당 테이블의 PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY)     //PK 생성규칙, auto_increment
